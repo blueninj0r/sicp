@@ -17,6 +17,11 @@ Chapter 1 Exercises
 * (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) - 16
 * (+ 2 (if (> b a) b a)) - 6
 * (* (cond ((> a b) a) ((< a b) b) (else -1)) (+ a 1)) - 16
+* 
+1.4
+---
+
+This function will take two values a and b. If b is negative (or zero) the function does a - b, otherwise it does a + b. Effectively always adding the absolute value of b to a.
 
 1.5
 ---
