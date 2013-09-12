@@ -1,4 +1,3 @@
-sicp
-====
+# Working Through Structure and Interpretation of Computer Programs 2nd ed.
 
-Working my way through SICP
+I'm using Racket to work through SICP. Hopefully I'll learn something along the way.
