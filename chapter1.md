@@ -1,11 +1,26 @@
 Chapter 1 Exercises
 ===================
 
-1.2
+1.1
 ---
 
-(/ (+ 5 (- 2 (- 3 (+ 6 (/ 1 3))))) (* 3 (- 6 2) (- 7 2)))
+* 10 - 10
+* (+ 5 3 4) - 12
+* (- 9 1) - 8
+* (/ 6 2) - 3
+* (+ (* 2 4) (- 4 6)) - 6
+* (define a 3) - 3
+* (define b (+ a 1)) - 4
+* (+ a b (* a b)) - 19
+* (= a b) - #f
+* (if (and (> b a) (< b (* a b))) b a) - 4
+* (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) - 16
+* (+ 2 (if (> b a) b a)) - 6
+* (* (cond ((> a b) a) ((< a b) b) (else -1)) (+ a 1)) - 16
 
 1.5
 ---
 
+Normal order evaluation - Expand fully then reduce. Only expand when a value is required. Applicative order evaluation - Evaluate arguments then apply, i.e. evaluate operator and operands and apply resulting procedure to arguments immediately (the arguments could be further operators and operands).
+
+Applicative order evaluation will not work. Under normal order, the (p) argument in (test 0 (p)) will never be evaluated as the if expression will always return 0. Under applicative order, the interpreter will try and substiture (p) with another (p) and another and another and...
