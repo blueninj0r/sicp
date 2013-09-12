@@ -29,3 +29,8 @@ This function will take two values a and b. If b is negative (or zero) the funct
 Normal order evaluation - Expand fully then reduce. Only expand when a value is required. Applicative order evaluation - Evaluate arguments then apply, i.e. evaluate operator and operands and apply resulting procedure to arguments immediately (the arguments could be further operators and operands).
 
 Applicative order evaluation will not work. Under normal order, the (p) argument in (test 0 (p)) will never be evaluated as the if expression will always return 0. Under applicative order, the interpreter will try and substiture (p) with another (p) and another and another and...
+
+1.6
+---
+
+Under applicative order, the parser will try and expand the square-iter function infinitely. This is not an issue with the way the if special form is parsed.
