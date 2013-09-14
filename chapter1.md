@@ -34,3 +34,10 @@ Applicative order evaluation will not work. Under normal order, the (p) argument
 ---
 
 Under applicative order, the parser will try and expand the square-iter function infinitely. This is not an issue with the way the if special form is parsed.
+
+1.7
+---
+
+For very small numbers, the tolerance value will not be small enough. We'll very quickly return an acceptable value or even return immediately if the numbers are small enough.
+
+For very large numbers, issues caused by rounding will introduce problems when squaring the guess value. (Potentially not a problem.) The other issue with large numbers is that it can take a very long time for guesses to approach a difference of less than the threshold once the increments become relatively small.
