@@ -15,8 +15,8 @@
   (/ (+ x y) 2))
 
 (define (good-enough? guess prev x)
-  (and (< (/ guess prev) 1.01)
-       (> (/ guess prev) .99)))
+     (< (abs (- guess prev)) 
+      (* guess 0.001))) 
 
 (define (square x) (* x x))
 
